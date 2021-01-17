@@ -1,0 +1,79 @@
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    }
+
+body{
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+    background-image:url(cool-background.png)
+}
+
+button {background-image: linear-gradient(to right, #FF8008 0%, #FFC837  51%, #FF8008  100%)}
+button {
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+ }
+
+ button:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+ h3 {
+    display: inline-block;
+    color: white;
+    font-family: 'Righteous', serif;
+    font-size: 5em; 
+    text-shadow: .03em .03em 0 hsla(230,40%,50%,1);
+    z-index: -1;
+
+    }
+    h3:after {
+      content: attr(data-shadow);
+      position: absolute;
+      top: 7px; left: 0px;
+      z-index: -1;
+      text-shadow: none;
+      background-image:
+        linear-gradient(
+          45deg,
+          transparent 45%,
+          hsla(48,20%,90%,1) 45%,
+          hsla(48,20%,90%,1) 55%,
+          transparent 0
+          );
+      background-size: .05em .05em;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    animation-name:shad-anim;
+      animation: shad-anim 15s linear infinite;
+      }
+  
+  @keyframes shad-anim {
+    0% {background-position: 0 0}
+    0% {background-position: 100% -100%}
+    }
+    canvas{
+        animation-name: shadow;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        margin-top: 100px;
+    }
+    @keyframes shadow{
+    from{box-shadow : 5px 5px 38px rgb(238, 233, 233)}
+    to{box-shadow : 5px 5px 38px rgb(5, 5, 5)}   
+    
+    }
